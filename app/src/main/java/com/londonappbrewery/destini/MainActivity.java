@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mBottomButton = findViewById(R.id.buttonBottom);
         mIndex = 1;
 
-//        if(savedInstanceState != null){
+//        if(savedInstanceState != null){  
 //            mIndex = savedInstanceState.getInt("Index");
 //        }
 
@@ -48,15 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(mIndex == 1){
-
-                    mTextView.setText(R.string.T3_Story);
-                    mTopButton.setText(R.string.T3_Ans1);
-                    mBottomButton.setText(R.string.T3_Ans2);
-                    mIndex = 3;
-
-                }
-                else if(mIndex == 2){
+                if(mIndex == 1 || mIndex == 2) {
 
                     mTextView.setText(R.string.T3_Story);
                     mTopButton.setText(R.string.T3_Ans1);
@@ -69,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     mTextView.setText(R.string.T6_End);
                     mTopButton.setVisibility(View.GONE);
                     mBottomButton.setVisibility(View.GONE);
-                    mIndex = 6;
+                    mIndex = 6; // I save this index in order to use it when we rotate the phone and save the status of the story rather than restart the story
                     Toast.makeText(getApplicationContext(),"Rotate the phone to restart!",Toast.LENGTH_SHORT).show();
 
                 }
@@ -97,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     mTextView.setText(R.string.T4_End);
                     mTopButton.setVisibility(View.GONE);
                     mBottomButton.setVisibility(View.GONE);
-                    mIndex = 4;
+                    mIndex = 4; // I save this index in order to use it when we rotate the phone and save the status of the story rather than restart the story
                     Toast.makeText(getApplicationContext(),"Rotate the phone to restart!",Toast.LENGTH_SHORT).show();
 
                 }
@@ -106,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                     mTextView.setText(R.string.T5_End);
                     mTopButton.setVisibility(View.GONE);
                     mBottomButton.setVisibility(View.GONE);
-                    mIndex = 5;
+                    mIndex = 5; // I save this index in order to use it when we rotate the phone and save the status of the story rather than restart the story
                     Toast.makeText(getApplicationContext(),"Rotate the phone to restart!",Toast.LENGTH_SHORT).show();
 
                 }
